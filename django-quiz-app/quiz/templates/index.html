@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<center><h1><font size ="+5"> Alice Home </font></h1></center>
+<br>
+{% if user.is_authenticated %}
+    <p><b>Username</b>: {{user.username}}</p>
+    <p><b>Name</b>: {{user.first_name}} {{user.last_name}}</p>
+    <p><b>Email</b>: {{user.email}}</p>
+    
+{% endif %}
+    
+{% endblock  %}
